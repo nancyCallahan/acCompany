@@ -114,6 +114,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'gestor_de_projecte_homepage',);
         }
 
+        // admin
+        if ($pathinfo === '/admin') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\adminController::adminAction',  '_route' => 'admin',);
+        }
+
+        // cons
+        if ($pathinfo === '/cons') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consController::consAction',  '_route' => 'cons',);
+        }
+
+        // treb
+        if ($pathinfo === '/treb') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\trebController::trebAction',  '_route' => 'treb',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

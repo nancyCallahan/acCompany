@@ -1,3 +1,15 @@
 gestor_de_projecte_homepage:
     path:     /
     defaults: { _controller: GestorDeProjecteBundle:Default:index }
+
+admin:
+    path:     /admin
+    defaults: { _controller: GestorDeProjecteBundle:admin:admin }
+
+cons:
+    path:     /cons
+    defaults: { _controller: GestorDeProjecteBundle:cons:cons }
+
+treb:
+    path:     /treb
+    defaults: { _controller: GestorDeProjecteBundle:treb:treb }
