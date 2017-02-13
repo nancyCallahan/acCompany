@@ -6,6 +6,10 @@ persona:
     path:     /altaPersona
     defaults: { _controller: GestorDeProjecteBundle:Persona:alta }
 
+nou_persona:
+    path:     /eventos/nou
+    defaults: { _controller: elMeuPrimerBundle:Persona:personaAlta }
+
 admin:
     path:     /admin
     defaults: { _controller: GestorDeProjecteBundle:admin:admin }
