@@ -2,6 +2,10 @@ gestor_de_projecte_homepage:
     path:     /
     defaults: { _controller: GestorDeProjecteBundle:Default:index }
 
+persona:
+    path:     /altaPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:alta }
+
 admin:
     path:     /admin
     defaults: { _controller: GestorDeProjecteBundle:admin:admin }
