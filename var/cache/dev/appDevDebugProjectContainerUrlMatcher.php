@@ -119,14 +119,56 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\adminController::adminAction',  '_route' => 'admin',);
         }
 
-        // cons
-        if ($pathinfo === '/cons') {
-            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consController::consAction',  '_route' => 'cons',);
+        if (0 === strpos($pathinfo, '/cons')) {
+            // cons
+            if ($pathinfo === '/cons') {
+                return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consController::consAction',  '_route' => 'cons',);
+            }
+
+            if (0 === strpos($pathinfo, '/consConsu')) {
+                // consConsuTreb
+                if ($pathinfo === '/consConsuTreb') {
+                    return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consConsuTrebController::consConsuTrebAction',  '_route' => 'consConsuTreb',);
+                }
+
+                // consConsuProj
+                if ($pathinfo === '/consConsuProj') {
+                    return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consConsuProjController::consConsuProjAction',  '_route' => 'consConsuProj',);
+                }
+
+                // consConsuTasq
+                if ($pathinfo === '/consConsuTasq') {
+                    return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\consConsuTasqController::consConsuTasqAction',  '_route' => 'consConsuTasq',);
+                }
+
+            }
+
         }
 
-        // treb
-        if ($pathinfo === '/treb') {
-            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\trebController::trebAction',  '_route' => 'treb',);
+        if (0 === strpos($pathinfo, '/treb')) {
+            // treb
+            if ($pathinfo === '/treb') {
+                return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\trebController::trebAction',  '_route' => 'treb',);
+            }
+
+            // trebHores
+            if (0 === strpos($pathinfo, '/trebHores') && preg_match('#^/trebHores/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'trebHores')), array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\trebHoresController::trebHoresAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/trebConsProj')) {
+                // trebConsProj
+                if ($pathinfo === '/trebConsProj') {
+                    return array (  '_controller' => 'GestorDeProjecteBundle:trebConsProj:trebConsProj',  '_route' => 'trebConsProj',);
+                }
+
+                // trebConsTasq
+                if ($pathinfo === '/trebConsProj') {
+                    return array (  '_controller' => 'GestorDeProjecteBundle:trebConsProj:trebConsProj',  '_route' => 'trebConsTasq',);
+                }
+
+            }
+
         }
 
         // homepage

@@ -10,6 +10,30 @@ cons:
     path:     /cons
     defaults: { _controller: GestorDeProjecteBundle:cons:cons }
 
+consConsuTreb:
+    path:     /consConsuTreb
+    defaults: { _controller: GestorDeProjecteBundle:consConsuTreb:consConsuTreb }
+
+consConsuProj:
+    path:     /consConsuProj
+    defaults: { _controller: GestorDeProjecteBundle:consConsuProj:consConsuProj }
+
+consConsuTasq:
+    path:     /consConsuTasq
+    defaults: { _controller: GestorDeProjecteBundle:consConsuTasq:consConsuTasq }
+
 treb:
     path:     /treb
     defaults: { _controller: GestorDeProjecteBundle:treb:treb }
+
+trebHores:
+    path:     /trebHores/{id}
+    defaults: { _controller: GestorDeProjecteBundle:trebHores:trebHores }
+
+trebConsProj:
+    path:     /trebConsProj
+    defaults: { _controller: GestorDeProjecteBundle:trebConsProj:trebConsProj }
+
+trebConsTasq:
+    path:     /trebConsProj
+    defaults: { _controller: GestorDeProjecteBundle:trebConsProj:trebConsProj }
