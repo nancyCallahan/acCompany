@@ -122,7 +122,7 @@ class PersonaController extends Controller
         }
 
         $product->setName('New product name!');
-        em->flush();
+        $em->flush();
 
         return $this->redirectToRoute('homepage');
 

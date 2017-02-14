@@ -142,6 +142,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::modificaPersonaAction',  '_route' => 'modificaPersona',);
         }
 
+        // formulariAltaProjecte
+        if ($pathinfo === '/formulariAltaProjecte') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\ProjecteController::formulariAltaProjecteAction',  '_route' => 'formulariAltaProjecte',);
+        }
+
         // admin
         if ($pathinfo === '/admin') {
             return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\adminController::adminAction',  '_route' => 'admin',);

@@ -1,0 +1,23 @@
+{% extends "GestorDeProjecteBundle:Default:index.html.twig " %} 
+{% block body %}
+	<table>
+    	<tr>
+		  	<td><strong>Id</strong></td>
+		  	<td><strong>Descripció Curta</strong></td>
+		  	<td><strong>Descripció Llarga</strong></td>
+		  	<td><strong>Entorn</strong></td>
+		  	<td><strong>Imatge</strong></td>
+		</tr>
+	
+    	{% for projecte in projectes %}
+    		<tr>
+        		<td>{{projecte.id}}</td>
+        		<td>{{projecte.descrip_curta}}</td>
+        		<td>{{projecte.descrip_llarga}}</td>
+        		<td>{{projecte.entorn}}</td>
+        		<td>{{projecte.imatge}}</td>
+        	</tr>
+    	{% endfor %}
+	
+	</table>
+{% endblock %}

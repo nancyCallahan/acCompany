@@ -26,6 +26,11 @@ modificaPersona:
     path:     /modificaPersona
     defaults: { _controller: GestorDeProjecteBundle:Persona:modificaPersona}
 
+#formulari d'alta d'un projecte 
+formulariAltaProjecte:
+    path:     /formulariAltaProjecte
+    defaults: { _controller: GestorDeProjecteBundle:Projecte:formulariAltaProjecte}
+
 admin:
     path:     /admin
     defaults: { _controller: GestorDeProjecteBundle:admin:admin }
