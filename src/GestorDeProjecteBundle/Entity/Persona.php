@@ -49,6 +49,13 @@ class Persona
      */
     private $tipus;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="hores", type="integer")
+     */
+    private $hores;
+
 
     /**
      * Get id
@@ -155,5 +162,28 @@ class Persona
     {
         return $this->tipus;
     }
-}
 
+    /**
+     * Set hores
+     *
+     * @param integer $hores
+     *
+     * @return Persona
+     */
+    public function setHores($hores)
+    {
+        $this->hores = $hores;
+
+        return $this;
+    }
+
+    /**
+     * Get hores
+     *
+     * @return integer
+     */
+    public function getHores()
+    {
+        return $this->hores;
+    }
+}

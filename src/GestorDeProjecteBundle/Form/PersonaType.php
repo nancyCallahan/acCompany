@@ -5,6 +5,10 @@ namespace GestorDeProjecteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 
 class PersonaType extends AbstractType
 {
@@ -13,7 +17,13 @@ class PersonaType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nif')->add('nom')->add('cognom')->add('tipus')        ;
+        $builder
+            ->add('nif',TextType::class)
+            ->add('nom',TextType::class)
+            ->add('cognom',TextType::class)
+            ->add('tipus',TextType::class)
+            ->add('hores',TextType::class)
+            ->add('guardar', SubmitType::class)       ;
     }
     
     /**

@@ -3,42 +3,62 @@
 namespace GestorDeProjecteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use elMeuPrimerBundle\Entity\Persona;
-use elMeuPrimerBundle\Form\PersonaType;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use GestorDeProjecteBundle\Entity\Persona;
+use GestorDeProjecteBundle\Form\PersonaType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class adminController extends Controller
+class PersonaController extends Controller
 {
-    public function altaAction()
+    public function mostraAltaPersonaAction()
     {
-    	$repository= $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
-    	$Persona=$repository->findAll();
-        return $this->render('GestorDeProjecteBundle:Default:mostraAltaPersona.html.twig',array('Persona'=>$Persona));
+        //pas 1 que retorni el manegador totes les persones
+        $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
+
+        // find *all* products
+        $persones = $repository->findAll();
+        return $this->render('GestorDeProjecteBundle:Default:mostraAltaPersona.html.twig',array('persones'=>$persones));	
     }
-    public function personaAltaAction(Request $request)
-    {	
-    	$Persona = new Persona();
-    	$form = $this->createForm(PersonaType::class);
-    	$form->handleRequest($request);
+
+    public function formulariAltaPersonaAction(Request $request)
+    {
+        $persones = new Persona();
+        $form = $this->createForm(PersonaType::class);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-	        // $form->getData() holds the submitted values
-	        // but, the original `$task` variable has also been updated
-	        $Persona = $form->getData();
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $persones = $form->getData();
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($persones);
+            $em->flush();
 
-	        // ... perform some action, such as saving the task to the database
-	        // for example, if Task is a Doctrine entity, save it!
-	         $em = $this->getDoctrine()->getManager();
-	         $em->persist($Persona);
-	         $em->flush();
+            //Si té exit que es vegin tots els treballadors
+            $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
 
-	         $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
-	         // find *all* events
-			 $events = $repository->findAll();
-	         return $this->render('GestorDeProjecteBundle:formulariAltaPersona.html.twig',array('Persona'=>$Persona));
-    	}
+            // find *all* products
+            $persones = $repository->findAll();
+            return $this->render('GestorDeProjecteBundle:Default:mostraAltaPersona.html.twig',array('persones'=>$persones));
+        }
 
-    	return $this->render('elMeuPrimerBundle:Eventos:nou.html.twig',array('form'=>$form->createView() ));
+        return $this->render('GestorDeProjecteBundle:Default:formulariAltaPersona.html.twig',array('form'=>$form->createView() ));  
+    }
+
+    public function mostraPersonaAction($id = 8)
+    {
+        //pas 1 recuperem les persones de la entitat
+        $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
+
+        // busquem a la persona per id
+        $persona = $repository->find($id);
+        return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig',array('persona'=>$persona));
+        //return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig');    
     }
 
 }
