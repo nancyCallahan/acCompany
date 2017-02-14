@@ -60,5 +60,42 @@ class PersonaController extends Controller
         return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig',array('persona'=>$persona));
         //return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig');    
     }
+        //ME QUEDAT AQUÍ I ENCARA HO TINC QUE GESTIONAR
+    
+    public function esborrarPersonaAction($id = 8)
+    {   //buscarem la persona de la entitat
+        $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
+        // busquem a la persona per id
+        $persona = $repository->find($id);
+        if(!$persona){
+            //hem de pensar on la redirigim
+           
+             return $this->render('GestorDeProjecteBundle:Default:personaNoBaixa.html.twig',array('nPila' => $nPila));
+        }else{
+            $em->remove($persona);
+            $em->flush();
+            //hem de pensar on la redirigim
+            return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig',array('persona'=>$persona));
+        }
+        
+    }
+    /**
+    public function modificarPErsonaAction($id)
+    {
+        //buscarem la persona de la entitat
+        $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
+        // busquem a la persona per id
+        $persona = $repository->find($id);
 
+        if (!$persona) {
+            //la persona no existeix a on la enviem
+            return $this->render('GestorDeProjecteBundle:Default:mostraUnaPersona.html.twig',array('persona'=>$persona));
+        }
+
+        $product->setName('New product name!');
+        em->flush();
+
+        return $this->redirectToRoute('homepage');
+
+    }*/
 }

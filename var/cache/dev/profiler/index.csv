@@ -250,3 +250,9 @@ f0edff,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1
 11c8d2,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066425,840909,200
 840909,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066425,,500
 d06e4c,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066537,,200
+c73adc,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487082374,,200
+ae81b0,::1,GET,http://localhost/accompany/web/app_dev.php/,1487082419,,200
+9e6431,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082509,bbd61e,200
+bbd61e,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082509,,500
+98dddf,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082706,432add,200
+432add,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082706,,500
