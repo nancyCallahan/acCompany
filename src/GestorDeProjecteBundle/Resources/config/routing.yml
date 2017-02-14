@@ -17,6 +17,10 @@ una_persona:
     path:     /mostraPersona
     defaults: { _controller: GestorDeProjecteBundle:Persona:mostraPersona,id:8 }
 
+esborra_persona:
+    path:     /esborra_persona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:mostraPersona,id:8 }
+
 admin:
     path:     /admin
     defaults: { _controller: GestorDeProjecteBundle:admin:admin }
