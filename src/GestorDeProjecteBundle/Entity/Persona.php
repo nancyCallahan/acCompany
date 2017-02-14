@@ -193,4 +193,28 @@ class Persona
     {
         return $this->hores;
     }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return Persona
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
 }

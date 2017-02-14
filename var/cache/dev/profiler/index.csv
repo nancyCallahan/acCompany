@@ -269,3 +269,5 @@ bbd61e,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,148708
 f19944,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083048,,500
 03b822,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083852,c71ad0,200
 c71ad0,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083852,,500
+9b7e4e,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083958,9d5560,200
+9d5560,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083958,,500
