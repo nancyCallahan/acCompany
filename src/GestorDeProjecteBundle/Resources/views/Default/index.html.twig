@@ -31,21 +31,24 @@
 	    <div class="col-lg-6 col-lg-offset-3 mT15">
 	    		
 			<div class="cuadrat">
-				<div class="col-lg-6 col-lg-offset-3 cont">
-					<div class=" text-center mT15">
-					<label>Usuari</label><br>
-	    			<input type="text" name="user" class="form-control w100 centrarHoritz" placeholder="usuari">
-				</div>
-	    		<div class=" text-center mT15 mB15">
-		    		<label>Contrasenya</label><br>
-		    		<input type="password" name="password" class="form-control w100 centrarHoritz" placeholder="contrasenya">
-		    	</div>	 
-		    	<div class=" text-right mT15 mB15 ">
-		    	
-		    		<input type="submit" name="submit" class="btn btn-negre " value="login">
-		    	</div>
-				</div>
-					 
+				<form method="POST" action="{{ path('trebConsProj') }}">
+					
+				
+					<div class="col-lg-6 col-lg-offset-3 cont">
+						<div class=" text-center mT15">
+							<label>Usuari</label><br>
+		    				<input type="text" name="user" class="form-control w100 centrarHoritz" placeholder="usuari">
+						</div>
+			    		<div class=" text-center mT15 mB15">
+				    		<label>Contrasenya</label><br>
+				    		<input type="password" name="password" class="form-control w100 centrarHoritz" placeholder="contrasenya">
+				    	</div>	 
+				    	<div class=" text-right mT15 mB15 ">
+				    	
+				    		<input type="submit" name="submit" class="btn btn-negre " value="login">
+				    	</div>
+					</div>
+				</form>		 
 			</div>
 	    </div>
     </div>
