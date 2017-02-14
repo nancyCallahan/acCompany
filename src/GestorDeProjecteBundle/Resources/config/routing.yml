@@ -15,11 +15,16 @@ persona:
 #mostra una persona per id
 una_persona:
     path:     /mostraPersona
-    defaults: { _controller: GestorDeProjecteBundle:Persona:mostraPersona,id:3 }
-
+    defaults: { _controller: GestorDeProjecteBundle:Persona:mostraPersona }
+#esborra una persona per id
 esborra_persona:
-    path:     /esborra_persona
-    defaults: { _controller: GestorDeProjecteBundle:Persona:esborrarPersona,id:8 }
+    path:     /esborraPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:esborrarPersona}
+
+#modifica una persona 
+modificaPersona:
+    path:     /modificaPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:modificaPersona}
 
 admin:
     path:     /admin

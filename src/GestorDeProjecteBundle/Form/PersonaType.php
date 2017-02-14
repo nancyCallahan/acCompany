@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 
 class PersonaType extends AbstractType
@@ -23,6 +24,7 @@ class PersonaType extends AbstractType
             ->add('cognom',TextType::class)
             ->add('tipus',TextType::class)
             ->add('hores',TextType::class)
+            ->add('password',PasswordType::class)
             ->add('guardar', SubmitType::class)       ;
     }
     

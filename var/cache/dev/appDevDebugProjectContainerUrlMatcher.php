@@ -127,14 +127,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             // una_persona
             if ($pathinfo === '/mostraPersona') {
-                return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::mostraPersonaAction',  'id' => 3,  '_route' => 'una_persona',);
+                return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::mostraPersonaAction',  '_route' => 'una_persona',);
             }
 
         }
 
         // esborra_persona
-        if ($pathinfo === '/esborra_persona') {
-            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::esborrarPersonaAction',  'id' => 8,  '_route' => 'esborra_persona',);
+        if ($pathinfo === '/esborraPersona') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::esborrarPersonaAction',  '_route' => 'esborra_persona',);
+        }
+
+        // modificaPersona
+        if ($pathinfo === '/modificaPersona') {
+            return array (  '_controller' => 'GestorDeProjecteBundle\\Controller\\PersonaController::modificaPersonaAction',  '_route' => 'modificaPersona',);
         }
 
         // admin
