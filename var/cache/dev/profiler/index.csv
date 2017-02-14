@@ -145,6 +145,10 @@ e6b512,::1,GET,http://localhost/acCompany/web/app_dev.php/trebHores/50,148697296
 35f3ce,::1,GET,http://localhost/acCompany/web/app_dev.php/cons,1486995121,,200
 6d816a,::1,GET,http://localhost/acCompany/web/app_dev.php/,1486995151,,200
 56d367,::1,GET,http://localhost/acCompany/web/app_dev.php/,1486995322,,200
+<<<<<<< HEAD
+a9a8b3,::1,GET,http://localhost/acCompany/web/app_dev.php/,1487001485,d05996,200
+d05996,::1,GET,http://localhost/acCompany/web/app_dev.php/,1487001485,,500
+=======
 08a460,::1,GET,http://localhost/accompany/web/app_dev.php/,1487001310,c28d82,200
 c28d82,::1,GET,http://localhost/accompany/web/app_dev.php/,1487001310,,500
 afa604,::1,GET,http://localhost/accompany/web/app_dev.php/mostraAltaPersona,1487001321,f0f87f,200
@@ -250,9 +254,13 @@ f0edff,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1
 11c8d2,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066425,840909,200
 840909,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066425,,500
 d06e4c,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487066537,,200
+<<<<<<< HEAD
 c73adc,::1,GET,http://localhost/accompany/web/app_dev.php/formulariAltaPersona,1487082374,,200
 ae81b0,::1,GET,http://localhost/accompany/web/app_dev.php/,1487082419,,200
 9e6431,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082509,bbd61e,200
 bbd61e,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082509,,500
 98dddf,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082706,432add,200
 432add,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,1487082706,,500
+=======
+>>>>>>> master
+>>>>>>> master
