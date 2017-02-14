@@ -264,3 +264,6 @@ bbd61e,::1,GET,http://localhost/accompany/web/app_dev.php/esborra_persona,148708
 =======
 >>>>>>> master
 >>>>>>> master
+336af1,::1,GET,http://localhost/acCompany/web/app_dev.php/,1487083038,,200
+25c979,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083048,f19944,200
+f19944,::1,GET,http://localhost/acCompany/web/app_dev.php/mostraPersona,1487083048,,500
