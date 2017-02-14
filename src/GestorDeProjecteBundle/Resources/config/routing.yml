@@ -1,14 +1,21 @@
 gestor_de_projecte_homepage:
     path:     /
     defaults: { _controller: GestorDeProjecteBundle:Default:index }
-
-persona:
-    path:     /altaPersona
-    defaults: { _controller: GestorDeProjecteBundle:Persona:alta }
-
+# referent a persona
+# formulari alta persona
 nou_persona:
-    path:     /eventos/nou
-    defaults: { _controller: elMeuPrimerBundle:Persona:personaAlta }
+    path:     /formulariAltaPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:formulariAltaPersona }
+
+# mostra les dades d'una persona controller Persona funcio mostrarAltaPersona
+persona:
+    path:     /mostraAltaPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:mostraAltaPersona }
+
+#mostra una persona per id
+una_persona:
+    path:     /mostraPersona
+    defaults: { _controller: GestorDeProjecteBundle:Persona:mostraPersona,id:8 }
 
 admin:
     path:     /admin
