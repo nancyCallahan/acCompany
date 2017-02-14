@@ -35,6 +35,13 @@ class Persona
      */
     private $nom;
 
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="Password", type="string", length=255)
+     */
+    private $password;
+
     /**
      * @var string
      *
