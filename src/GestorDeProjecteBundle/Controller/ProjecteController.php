@@ -28,8 +28,8 @@ class ProjecteController extends Controller
         return $this->render('GestorDeProjecteBundle:Default:personaNoBaixa.html.twig',array('nPila' => $nPila));
 
 
-        
 
+        /*
         $projectes = new Projecte();
         $form = $this->createForm(ProjecteType::class);
         $form->handleRequest($request);
@@ -52,7 +52,7 @@ class ProjecteController extends Controller
             return $this->render('GestorDeProjecteBundle:Default:mostraAltaProjectes.html.twig',array('projectes'=>$projectes));
         }
 
-        return $this->render('GestorDeProjecteBundle:Default:formulariAltaProjecte.html.twig',array('form'=>$form->createView() )); 
+        return $this->render('GestorDeProjecteBundle:Default:formulariAltaProjecte.html.twig',array('form'=>$form->createView() )); */
     }
 
     public function mostraPersonaAction()

@@ -127,4 +127,34 @@ class PersonaController extends Controller
         return $this->redirectToRoute('homepage');
 
     }
+      public function loginAction()
+    {
+        
+       $nif=$_REQUEST['user'];
+       //buscarem la persona de la entitat
+        $repository = $this->getDoctrine()->getRepository('GestorDeProjecteBundle:Persona');
+        // busquem a la persona per id
+        $persona = $repository->findByNif($nif);
+        if(!$persona){
+            //hem de pensar on la redirigim
+            $nPila = "No existeix cap usuaria amb aquest dni";
+             return $this->render('GestorDeProjecteBundle:Default:personaNoLogin.html.twig',array('nPila' => $nPila));
+        }else{
+            $repository = $this->getDoctrine()
+                ->getRepository('GestorDeProjecte:Persona');
+            $query = $repository->createQueryBuilder('p')
+                ->where('p.Nif =:user')
+                ->andwhere('p.password=:password')
+                
+                ->getQuery();
+
+            /*$products = $query->getResult();
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($persona);*/
+            $persona = $query->getResult();
+            $nPila = "loginCorrecte";
+             return $this->render('GestorDeProjecteBundle:Default:personaNoLogin.html.twig',array('nPila' => $nPila));
+        }
+        
+    }
 }

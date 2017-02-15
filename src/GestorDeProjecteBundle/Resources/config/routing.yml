@@ -1,7 +1,13 @@
 gestor_de_projecte_homepage:
     path:     /
     defaults: { _controller: GestorDeProjecteBundle:Default:index }
+
 # referent a persona
+# formulari alta persona
+login_persona:
+    path:     /login
+    defaults: { _controller: GestorDeProjecteBundle:Persona:login}
+
 # formulari alta persona
 nou_persona:
     path:     /formulariAltaPersona
